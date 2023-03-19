@@ -25,7 +25,7 @@ public class Segment {
         return String.format(Locale.ENGLISH, "<line x1=\"%f\" y1=\"%f\" x2=\"%f\" y2=\"%f\" style=\"stroke:rgb(255,0,0);stroke-width:2\" />",p1.x,p1.y,p2.x,p2.y);
     }
 
-    public static Segment[] perpendicular(Segment line, Point point, double r) {
+    public static Segment[] perpendicular(Segment line, Point point) {
         double a;
         a = (line.p1.y - line.p2.y) / (line.p1.x - line.p2.x);
         double b;
@@ -34,7 +34,7 @@ public class Segment {
 
         double x0 = point.x;
         double y0 = point.y;
-        //double r = line.distance();
+        double r = line.distance();
 
         double root = Math.sqrt(-y0*y0+(2*a*x0+2*b)*y0-a*a*x0*x0-2*a*b*x0+(a*a+1)*r*r-b*b);
         double x1 = -(root-a*y0-x0+a*b)/(a*a+1);
