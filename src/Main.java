@@ -4,6 +4,8 @@ public class Main {
         Point p2 = new Point(33,9);
         Segment s = new Segment(p1, p2);
 
-        System.out.println(s.distance());
+        s.toSVG();
+
+
     }
 }
