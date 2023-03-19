@@ -5,6 +5,5 @@ public class Main {
         SvgScene scene = new SvgScene();
         scene.add(poly);
         scene.saveHtml("index.html");
-
     }
 }
